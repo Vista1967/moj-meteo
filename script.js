@@ -52,6 +52,6 @@ function refreshWeather() {
 citySelect.addEventListener("change", refreshWeather);
 
 // Postavljanje podrazumevanog grada
-const defaultCity = "Sint-Pieters-Leeuw"; // Izmenite naziv grada po želji
+const defaultCity = "Sint-Pieters-Leeuw"; // Postavljamo Sint-Pieters-Leeuw kao podrazumevani grad
 citySelect.value = defaultCity; // Postavljanje izabranog grada
 refreshWeather(); // Ažuriranje podataka za podrazumevani grad
