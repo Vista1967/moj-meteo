@@ -3,7 +3,7 @@
   "name": "Prévisions Météo",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "Meteo.png",  // samo ime datoteke
       "sizes": "512x512",
       "type": "image/png"
     }
