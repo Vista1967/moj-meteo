@@ -1,5 +1,6 @@
 const apiKey = "959d9451d7f23817254ee887e8245961"; // Zamenite sa svojim OpenWeatherMap API ključem
 
+
 // Lista gradova za izbor
 const europeanCities = [
     "Belgrade", "Paris", "London", "Berlin", "Madrid", "Rome", "Vienna", "Athens", "Budapest", 
@@ -52,6 +53,7 @@ function refreshWeather() {
 citySelect.addEventListener("change", refreshWeather);
 
 // Postavljanje podrazumevanog grada
-const defaultCity = "Sint-Pieters-Leeuw"; // Postavljamo Sint-Pieters-Leeuw kao podrazumevani grad
+const defaultCity = "Sint-Pieters-Leeuw"; // Podrazumevani grad
 citySelect.value = defaultCity; // Postavljanje izabranog grada
 refreshWeather(); // Ažuriranje podataka za podrazumevani grad
+
