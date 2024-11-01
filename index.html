@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="weather-container">
+        <h1 class="title">Prévisions Météo</h1>
+        <div class="city-selector">
+            <label for="city-select">Sélectionnez la ville :</label>
+            <select id="city-select"></select>
+        </div>
+        <div class="weather-display">
+            <img id="weather-icon" class="weather-icon" alt="Weather Icon">
+            <p class="weather-item"><span id="temperature">--</span>°C</p>
+            <p class="weather-item">Humidité: <span id="humidity">--</span>%</p>
+            <p class="weather-item description"><span id="description">--</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
