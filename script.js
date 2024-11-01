@@ -40,7 +40,7 @@ function updateWeather(city) {
             const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`; // URL za ikonu
             document.getElementById("weather-icon").src = iconUrl; // Postavi URL ikone
         })
-        .catch(error => console.log("Greška prilikom dohvatanja podataka:", error));
+        .catch(error => console.error("Greška prilikom dohvatanja podataka:", error));
 }
 
 // Funkcija za osvežavanje vremenskih podataka
@@ -53,7 +53,8 @@ function refreshWeather() {
 citySelect.addEventListener("change", refreshWeather);
 
 // Postavljanje podrazumevanog grada
-const defaultCity = "Sint-Pieters-Leeuw"; // Podrazumevani grad
+const defaultCity = "Sint-Pieters-Leeuw, BE"; // Podrazumevani grad
 citySelect.value = defaultCity; // Postavljanje izabranog grada
 refreshWeather(); // Ažuriranje podataka za podrazumevani grad
+
 
