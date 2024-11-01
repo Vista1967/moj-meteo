@@ -20,9 +20,8 @@ europeanCities.forEach(city => {
 
 // Funkcija za ažuriranje podataka o vremenu
 function updateWeather(city) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=fr`;
-    console.log("API URL:", apiUrl); // Log URL za debug
-
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fr`;
+    
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -54,7 +53,8 @@ function refreshWeather() {
 citySelect.addEventListener("change", refreshWeather);
 
 // Postavljanje podrazumevanog grada
-const defaultCity = "Brussels, BE"; // Podrazumevani grad
+const defaultCity = "Sint-Pieters-Leeuw, BE"; // Podrazumevani grad
 citySelect.value = defaultCity; // Postavljanje izabranog grada
 refreshWeather(); // Ažuriranje podataka za podrazumevani grad
+
 
