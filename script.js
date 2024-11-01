@@ -1,26 +1,28 @@
 const apiKey = "959d9451d7f23817254ee887e8245961"; // Zamenite sa svojim OpenWeatherMap API ključem
 
-
 // Lista gradova za izbor
 const europeanCities = [
-    "Belgrade", "Paris", "London", "Berlin", "Madrid", "Rome", "Vienna", "Athens", "Budapest", 
-    "Prague", "Warsaw", "Dublin", "Brussels", "Amsterdam", "Lisbon", "Zurich", "Stockholm", 
-    "Oslo", "Copenhagen", "Helsinki", "Sofia", "Bucharest", "Ljubljana", "Zagreb", "Podgorica", 
-    "Sarajevo", "Skopje", "Tirana", "Sint-Pieters-Leeuw, BE", "Šabac, RS"
+    "Belgrade, RS", "Paris, FR", "London, GB", "Berlin, DE", "Madrid, ES", 
+    "Rome, IT", "Vienna, AT", "Athens, GR", "Budapest, HU", "Prague, CZ", 
+    "Warsaw, PL", "Dublin, IE", "Brussels, BE", "Amsterdam, NL", 
+    "Lisbon, PT", "Zurich, CH", "Stockholm, SE", "Oslo, NO", 
+    "Copenhagen, DK", "Helsinki, FI", "Sofia, BG", "Bucharest, RO", 
+    "Ljubljana, SI", "Zagreb, HR", "Podgorica, ME", "Sarajevo, BA", 
+    "Skopje, MK", "Tirana, AL", "Sint-Pieters-Leeuw, BE", "Šabac, RS"
 ];
 
 // Popunjavanje select elementa sa gradovima
 const citySelect = document.getElementById("city-select");
 europeanCities.forEach(city => {
     const option = document.createElement("option");
-    option.value = city;
+    option.value = city; // Koristimo naziv grada sa oznakom zemlje
     option.textContent = city;
     citySelect.appendChild(option);
 });
 
 // Funkcija za ažuriranje podataka o vremenu
 function updateWeather(city) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fr`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=fr`;
     
     fetch(apiUrl)
         .then(response => {
@@ -53,8 +55,6 @@ function refreshWeather() {
 citySelect.addEventListener("change", refreshWeather);
 
 // Postavljanje podrazumevanog grada
-const defaultCity = "Sint-Pieters-Leeuw, BE"; // Podrazumevani grad
+const defaultCity = "Sint-Pieters-Leeuw, BE"; // Podrazumevani grad sa oznakom zemlje
 citySelect.value = defaultCity; // Postavljanje izabranog grada
 refreshWeather(); // Ažuriranje podataka za podrazumevani grad
-
-
