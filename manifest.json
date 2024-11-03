@@ -1,0 +1,15 @@
+{
+  "short_name": "Météo",
+  "name": "Prévisions Météo",
+  "icons": [
+    {
+      "src": "Meteo.png",  // samo ime datoteke
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}
