@@ -20,12 +20,12 @@ body {
 }
 
 .weather-container {
-    background: rgba(255, 255, 255, 0.9); /* Prozirna bela pozadina */
+    background: rgba(255, 255, 255, 0.95); /* Prozirna bela pozadina */
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 300px;
-    max-width: 90%; /* Podesite maksimalnu širinu za manje ekrane */
+    width: 90%; /* Podesite širinu za manje ekrane */
+    max-width: 400px; /* Maksimalna širina */
     text-align: center;
 }
 
@@ -111,7 +111,7 @@ select {
 @media (max-width: 600px) {
     .weather-container {
         padding: 15px;
-        width: 100%;
+        width: 95%;
     }
     .title {
         font-size: 1.5em;
@@ -122,5 +122,22 @@ select {
     .weather-icon {
         width: 80px;
         height: 80px;
+    }
+}
+
+/* Dodatni stilovi za poboljšanje izgleda */
+@media (max-width: 400px) {
+    .weather-container {
+        padding: 10px;
+    }
+    .title {
+        font-size: 1.3em;
+    }
+    .weather-item {
+        font-size: 0.9em;
+    }
+    .weather-icon {
+        width: 70px;
+        height: 70px;
     }
 }
