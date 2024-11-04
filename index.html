@@ -35,7 +35,20 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript za registraciju Service Workera -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/worker.js')
+                .then(function(registration) {
+                    console.log("Service Worker registered with scope:", registration.scope);
+                })
+                .catch(function(error) {
+                    console.log("Service Worker registration failed:", error);
+                });
+        }
+    </script>
+
+    <!-- JavaScript za aplikaciju -->
     <script src="script.js"></script>
 </body>
 </html>
