@@ -5,9 +5,9 @@ const assets = [
     "/style.css",
     "/script.js",
     "/manifest.json",
-    "/icon-180x180.png",  // Ikona 180x180
-    "/icon-192.png",
-    "/icon-512.png"
+    "/icon-180x180.png",  
+    "/icon-192x192.png",
+    "/icon-512.x512.png"
 ];
 
 // Instalacija Service Workera i keširanje osnovnih fajlova
