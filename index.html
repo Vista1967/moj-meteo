@@ -1,41 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Météo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="Meteo-180x180.png">  <!-- Favicon ikona -->
-    <link rel="apple-touch-icon" sizes="192x192" href="Meteo-192x192.png">  <!-- Ikona za Apple uređaje -->
-    <link rel="manifest" href="manifest.json">  <!-- Povezivanje manifest fajla -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" type="image/png" href="Meteo-180x180.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="Meteo-192x192.png">
+    <link rel="manifest" href="manifest.json">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
     <div class="weather-container">
         <h1 class="title">Prévisions Météo</h1>
-        
-        <!-- Izbor grada -->
         <div class="city-selector">
             <label for="city-select">Sélectionnez la ville :</label>
             <select id="city-select"></select>
         </div>
-        
-        <!-- Prikaz podataka o vremenu -->
         <div class="weather-display">
             <img id="weather-icon" class="weather-icon" alt="Weather Icon">
             <p class="weather-item"><span id="temperature">--</span>°C</p>
             <p class="weather-item">Humidité: <span id="humidity">--</span>%</p>
-            <p class="weather-item">Vitesse du vent: <span id="wind-speed">--</span> m/s</p> <!-- Brzina vetra -->
-            <p class="weather-item">Précipitations: <span id="precipitation">--</span> mm</p> <!-- Padavine -->
-            <p class="weather-item">UV Index: <span id="uv-index">--</span></p> <!-- UV indeks -->
-            <p class="weather-item">Pollution Index: <span id="pollution">--</span></p> <!-- Indeks polucije -->
+            <p class="weather-item">Vitesse du vent: <span id="wind-speed">--</span> m/s</p>
+            <p class="weather-item">Précipitations: <span id="precipitation">--</span> mm</p>
+            <p class="weather-item">UV Index: <span id="uv-index">--</span></p>
+            <p class="weather-item">Pollution Index: <span id="pollution">--</span></p>
             <p class="weather-item description"><span id="description">--</span></p>
         </div>
     </div>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-/* Globalni stilovi */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,23 +5,22 @@
     font-family: Arial, sans-serif;
 }
 
-/* Pozadina i središnji izgled */
 body {
-    background: linear-gradient(135deg, #6dd5fa, #2980b9);
+    background: url('pozadinska.slika.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
 }
 
 .weather-container {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 300px;
+    width: 320px;
     text-align: center;
 }
 
@@ -36,20 +34,6 @@ body {
     margin: 15px 0;
 }
 
-.city-selector label {
-    font-weight: bold;
-    color: #555;
-}
-
-select {
-    width: 100%;
-    padding: 8px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-}
-
 .weather-display {
     margin-top: 20px;
 }
@@ -58,11 +42,6 @@ select {
     font-size: 1.2em;
     margin: 10px 0;
     color: #333;
-}
-
-.description {
-    font-style: italic;
-    color: #2980b9;
 }
 
 .weather-icon {
