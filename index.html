@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Météo</title>
     <link rel="stylesheet" href="style.css">
+<<<<<<< HEAD
     <link rel="icon" type="image/png" href="Meteo-180x180.png">
     <link rel="apple-touch-icon" sizes="192x192" href="Meteo-192x192.png">
     <link rel="manifest" href="manifest.json">
     <script src="script.js" defer></script>
+=======
+
+    <!-- Ikone i manifest za PWA -->
+    <link rel="icon" type="image/png" sizes="180x180" href="Meteo-180x180.png"> <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Meteo-180x180.png"> <!-- Apple 180x180 -->
+    <link rel="apple-touch-icon" sizes="192x192" href="Meteo-192x192.png"> <!-- Apple 192x192 -->
+    <link rel="apple-touch-icon" sizes="512x512" href="Meteo-512x512.png"> <!-- Apple 512x512 -->
+    <link rel="manifest" href="manifest.json"> <!-- Manifest fajl za PWA -->
+
+    <!-- Meta tagovi za iOS optimizaciju -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Météo">
+    
+    <!-- Učitajte jQuery biblioteku -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+>>>>>>> c488419667a4514155d7fc9904f88b092ef04c01
 </head>
 <body>
     <div class="weather-container">
@@ -28,5 +46,24 @@
             <p class="weather-item description"><span id="description">--</span></p>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+
+    <!-- Registracija Service Workera -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/worker.js')
+                .then(function(registration) {
+                    console.log("Service Worker registered with scope:", registration.scope);
+                })
+                .catch(function(error) {
+                    console.log("Service Worker registration failed:", error);
+                });
+        }
+    </script>
+
+    <!-- JavaScript za aplikaciju -->
+    <script src="script.js"></script>
+>>>>>>> c488419667a4514155d7fc9904f88b092ef04c01
 </body>
 </html>
