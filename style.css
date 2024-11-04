@@ -1,3 +1,4 @@
+/* Globalni stilovi */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
+/* Pozadina i središnji izgled */
 body {
     background: url('pozadinska.slika.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -13,14 +15,17 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin: 0;
+    padding: 10px;
 }
 
 .weather-container {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9); /* Prozirna bela pozadina */
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 320px;
+    width: 300px;
+    max-width: 90%; /* Podesite maksimalnu širinu za manje ekrane */
     text-align: center;
 }
 
@@ -34,6 +39,20 @@ body {
     margin: 15px 0;
 }
 
+.city-selector label {
+    font-weight: bold;
+    color: #555;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
 .weather-display {
     margin-top: 20px;
 }
@@ -44,8 +63,64 @@ body {
     color: #333;
 }
 
+.description {
+    font-style: italic;
+    color: #2980b9;
+}
+
 .weather-icon {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
+}
+
+/* Stilovi za vremensku prognozu */
+.forecast-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.forecast-item {
+    text-align: center;
+    margin: 10px;
+    flex: 1 0 45%;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-date {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.forecast-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.forecast-temp, .forecast-desc {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Medijski upiti za mobilne uređaje */
+@media (max-width: 600px) {
+    .weather-container {
+        padding: 15px;
+        width: 100%;
+    }
+    .title {
+        font-size: 1.5em;
+    }
+    .weather-item {
+        font-size: 1em;
+    }
+    .weather-icon {
+        width: 80px;
+        height: 80px;
+    }
 }
